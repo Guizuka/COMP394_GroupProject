@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public float speed = 5f;
+    public float jumpHeight = 5f;
 
     private Rigidbody2D playerRb;
     // Start is called before the first frame update
@@ -17,6 +18,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerRb.velocity = new Vector3(speed, 0, 0);
+        Vector3 playerVelocity = playerRb.velocity;
+        playerVelocity.x = speed;
+        playerRb.velocity = playerVelocity;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerRb.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
+        }
     }
 }
