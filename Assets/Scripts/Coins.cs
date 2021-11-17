@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Coins : MonoBehaviour
 {
     public Text uiScore;
-    private Score aScore;
+    private ScoreController scoreController;
     public string coinType;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -17,16 +17,15 @@ public class Coins : MonoBehaviour
             switch(coinType)
             {
                 case "BronzeCoin":
-                    aScore.addScore(uiScore, 10);
+                    scoreController.IncreaseScore(10);
                     break;
                 case "SilverCoin":
-                    aScore.addScore(uiScore, 100);
+                    scoreController.IncreaseScore(100);
                     break;
                 case "GoldCoin":
-                    aScore.addScore(uiScore, 1000);
+                    scoreController.IncreaseScore(1000);
                     break;
             }
-            
             Destroy(gameObject);
         }
     }
@@ -34,8 +33,7 @@ public class Coins : MonoBehaviour
     void Start()
     {
         coinType = this.gameObject.tag;
-        uiScore = GameObject.Find("UI/UIScore").GetComponent<Text>();
-        aScore = GameObject.Find("EventSystem").GetComponent<Score>();
+        scoreController = GameObject.Find("UI/UIScore").GetComponent<ScoreController>();
     }
 
     // Update is called once per frame
