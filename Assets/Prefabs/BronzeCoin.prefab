@@ -114,4 +114,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae84ef9a04dbcb4789fd6ccf0f49347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 0}
+  coinType: 
+  coinSounds:
+  - soundName: Coin1
+    clip: {fileID: 8300000, guid: 70c55a4d3bb4e6f42bee35c30044799e, type: 3}
+  - soundName: Coin2
+    clip: {fileID: 8300000, guid: fff0cf133a8f9444ab2172845dae47c6, type: 3}
+  - soundName: Coin3
+    clip: {fileID: 8300000, guid: e55518c012a877c499f3c2bf2e6a9aac, type: 3}
+  - soundName: Coin4
+    clip: {fileID: 8300000, guid: 1e03706747c19c84aa6823d046084fd1, type: 3}
+  - soundName: Coin5
+    clip: {fileID: 8300000, guid: 2b245a5f8531d114fb95d48ce39773e8, type: 3}
