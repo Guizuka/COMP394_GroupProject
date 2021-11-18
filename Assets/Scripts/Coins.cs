@@ -6,47 +6,46 @@ using Assets.Scripts;
 
 public class Coins : MonoBehaviour
 {
-    private ScoreController scoreController;
+    [SerializeField]
+    ScoreController scoreController;
     public string coinType;
+    [SerializeField]
+    private int coinValue;
 
     //Coin sounds
     private Sounds soundScript = new Sounds();
     [SerializeField]
     Sounds[] coinSounds;
 
-
+    // Start is called before the first frame update
+    void Start()
+    {
+        scoreController = GameObject.Find("UI/UIScore").GetComponent<ScoreController>();
+        soundScript.LoadSounds(coinSounds);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
         if (collision.gameObject.tag == "Player")
         {
             soundScript.PlayRandomSound(coinSounds);
             switch (coinType)
             {
-                case "BronzeCoin":
-                    scoreController.IncreaseScore(10);
+                case "Bronze":
+                    scoreController.IncreaseScore(coinValue);
                     break;
-                case "SilverCoin":
-                    scoreController.IncreaseScore(100);
+                case "Silver":
+                    scoreController.IncreaseScore(coinValue);
                     break;
-                case "GoldCoin":
-                    scoreController.IncreaseScore(1000);
+                case "Gold":
+                    scoreController.IncreaseScore(coinValue);
                     break;
             }
             Destroy(gameObject);
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        coinType = this.gameObject.tag;
-        scoreController = GameObject.Find("UI/UIScore").GetComponent<ScoreController>();
-        soundScript.LoadSounds(coinSounds);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

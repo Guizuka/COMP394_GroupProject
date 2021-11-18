@@ -4,9 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - BronzeCoin
-  - SilverCoin
-  - GoldCoin
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -16,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -41,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2360580997
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Other Items
+    uniqueID: 2704567993
+    locked: 0
+  - name: Player
+    uniqueID: 94009519
     locked: 0

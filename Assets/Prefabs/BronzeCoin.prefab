@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8168242327807492676}
   m_Layer: 0
   m_Name: BronzeCoin
-  m_TagString: BronzeCoin
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8168242327807492677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.55, y: -0.6, z: 0.50896776}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -114,7 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae84ef9a04dbcb4789fd6ccf0f49347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinType: 
+  scoreController: {fileID: 0}
+  coinType: Bronze
+  coinValue: 100
   coinSounds:
   - soundName: Coin1
     clip: {fileID: 8300000, guid: 70c55a4d3bb4e6f42bee35c30044799e, type: 3}
