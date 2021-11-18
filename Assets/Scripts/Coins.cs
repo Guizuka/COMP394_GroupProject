@@ -23,10 +23,9 @@ public class Coins : MonoBehaviour
         scoreController = GameObject.Find("UI/UIScore").GetComponent<ScoreController>();
         soundScript.LoadSounds(coinSounds);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             soundScript.PlayRandomSound(coinSounds);
             switch (coinType)

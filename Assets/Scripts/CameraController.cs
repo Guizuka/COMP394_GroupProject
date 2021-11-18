@@ -11,7 +11,6 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //Move the player right automatically
         playerDirectionHorizontal = new Vector2(horizontalSpeed * Time.deltaTime, 0);
     }
