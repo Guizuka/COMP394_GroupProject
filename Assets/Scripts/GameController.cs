@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public bool WonLevel = false;
+    public bool WonLevel, PlayerDead = false;
     public CameraController cc;
     public LoopBackground lb;
     public GameObject LevelWonUI;
+    public GameObject LevelLostUI;
     private void Start()
     {
         cc = FindObjectOfType<CameraController>();
@@ -35,6 +36,14 @@ public class GameController : MonoBehaviour
             LevelWonUI.SetActive(true);
         }
     }
+    public void LevelLost()
+    {
+        if (PlayerDead)
+        {
+            StartCoroutine(ExecuteAfterTime(0.01f));
+            LevelLostUI.SetActive(true);
+        }
+    }
     public void NextLevel()
     {
         //Proceed to the next level.
@@ -45,6 +54,12 @@ public class GameController : MonoBehaviour
     {
         //Restart the level.
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+    }
+    public void MainMenu()
+    {
+        //Load Main Menu
+        SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
     }
     //Enumerator used to stop time after player lost, exactly 1.01 seconds after player won.

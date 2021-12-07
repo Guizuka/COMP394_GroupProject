@@ -270,6 +270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalSpeed: 10
+  fireSpeed: 0
+  bolt: {fileID: 0}
   anim: {fileID: 0}
 --- !u!58 &7148607347161037444
 CircleCollider2D:
