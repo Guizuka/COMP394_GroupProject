@@ -1,2 +1,0 @@
-# COMP394_GroupProject
- 
