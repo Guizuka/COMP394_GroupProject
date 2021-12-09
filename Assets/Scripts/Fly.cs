@@ -13,7 +13,7 @@ public class Fly : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            GetComponent<WizardScript>().TakeDamage();
+            other.gameObject.GetComponent<WizardScript>().TakeDamage();
             Destroy(this.gameObject);
         }
     }

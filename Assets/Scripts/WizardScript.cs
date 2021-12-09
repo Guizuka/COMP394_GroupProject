@@ -28,13 +28,13 @@ public class WizardScript : MonoBehaviour
     void Update()
     {
         //Move the player up and down
-        float directionY = Input.GetAxisRaw("Vertical");
+        float directionY = Input.GetAxis("Vertical");
         playerDirectionVertical = new Vector2(0f, directionY).normalized;
         TextUpdate();
     }
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(0f, playerDirectionVertical.y * verticalSpeed);
+        rb.velocity = new Vector2(0f, playerDirectionVertical.y * verticalSpeed * Time.fixedDeltaTime);
     }
     public void TakeDamage()
     {
