@@ -9,11 +9,19 @@ public class Fly : MonoBehaviour
     {
         gameControllerScript = FindObjectOfType<GameController>();
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.tag == "Player")
         {
-            GetComponent<WizardScript>().TakeDamage();
+            other.GetComponent<WizardScript>().TakeDamage();
+            Destroy(this.gameObject);
+        }
+        if (other.tag == "Border")
+        {
+            Destroy(this.gameObject);
+        }
+        if(other.tag == "Bolt")
+        {
             Destroy(this.gameObject);
         }
     }
