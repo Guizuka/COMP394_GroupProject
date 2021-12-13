@@ -45,10 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a059a133b0ecab4f9b1788ef46a4d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WonLevel: 0
   cc: {fileID: 0}
   lb: {fileID: 0}
   LevelWonUI: {fileID: 0}
+  realScore: {fileID: 0}
+  stars: {fileID: 0}
+  LevelLostUI: {fileID: 0}
+  pauseMenuUI: {fileID: 0}
 --- !u!1 &200965569886933431
 GameObject:
   m_ObjectHideFlags: 0

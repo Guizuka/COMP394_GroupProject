@@ -7,7 +7,31 @@ public class MainMenu : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Tutorial");
+    }
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void Instructions()
+    {
+        SceneManager.LoadScene("Instructions");
+    }
+    public void Options()
+    {
+        SceneManager.LoadScene("Options");
+    }
+    public void EasyMode()
+    {
+        PlayerPrefs.SetString("Difficulty", "Easy");
+    }
+    public void MediumMode()
+    {
+        PlayerPrefs.SetString("Difficulty", "Medium");
+    }
+    public void HardMode()
+    {
+        PlayerPrefs.SetString("Difficulty", "Hard");
     }
     public void Exit()
     {
