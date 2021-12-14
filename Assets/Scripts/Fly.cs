@@ -22,10 +22,6 @@ public class Fly : MonoBehaviour
         }
         if(other.tag == "Bolt")
         {
-<<<<<<< HEAD
-            other.gameObject.GetComponent<WizardScript>().TakeDamage();
-=======
->>>>>>> main
             Destroy(this.gameObject);
         }
     }

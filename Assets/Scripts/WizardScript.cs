@@ -49,9 +49,6 @@ public class WizardScript : MonoBehaviour
     void Update()
     {
         //Move the player up and down
-<<<<<<< HEAD
-        float directionY = Input.GetAxis("Vertical");
-=======
         float directionY = Input.GetAxisRaw("Vertical");
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
@@ -61,7 +58,6 @@ public class WizardScript : MonoBehaviour
         {
             directionY = -1;
         }
->>>>>>> main
         playerDirectionVertical = new Vector2(0f, directionY).normalized;
         TextUpdate();
         if (numberOfLives <= 0)
@@ -81,11 +77,7 @@ public class WizardScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-<<<<<<< HEAD
-        rb.velocity = new Vector2(0f, playerDirectionVertical.y * verticalSpeed * Time.fixedDeltaTime);
-=======
         rb.velocity = new Vector2(0f, playerDirectionVertical.y * verticalSpeed * Time.deltaTime);
->>>>>>> main
     }
     public void TakeDamage()
     {

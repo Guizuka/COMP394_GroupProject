@@ -12,11 +12,7 @@ GameObject:
   - component: {fileID: 2128256452068514458}
   - component: {fileID: 2128256452068514456}
   - component: {fileID: 8102156516772728428}
-<<<<<<< HEAD
-  - component: {fileID: 9005526824222048386}
-=======
   - component: {fileID: 5112746967591342745}
->>>>>>> main
   m_Layer: 0
   m_Name: Fly
   m_TagString: Enemy
@@ -127,11 +123,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.36
-<<<<<<< HEAD
---- !u!114 &9005526824222048386
-=======
 --- !u!114 &5112746967591342745
->>>>>>> main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
