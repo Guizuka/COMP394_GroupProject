@@ -77,7 +77,7 @@ public class WizardScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(0f, playerDirectionVertical.y * verticalSpeed * Time.deltaTime);
+        rb.velocity = new Vector2(0f, playerDirectionVertical.y * verticalSpeed) * Time.fixedDeltaTime;
     }
     public void TakeDamage()
     {

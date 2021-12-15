@@ -569,11 +569,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7517530649425258730, guid: 0109203721aba77449e190a3efe087a4, type: 3}
   m_PrefabInstance: {fileID: 473888465}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &478420779 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7148607347161037447, guid: 6433cc37261d1a54cb7adf45aefd32eb, type: 3}
-  m_PrefabInstance: {fileID: 7148607346158432697}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &502557894 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 502557894, guid: 6f927bf144e756a48946e8ce34491a3d, type: 3}
@@ -5013,28 +5008,12 @@ PrefabInstance:
       value: -4.16
       objectReference: {fileID: 0}
     - target: {fileID: 7148607347161037445, guid: 6433cc37261d1a54cb7adf45aefd32eb, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 478420779}
-    - target: {fileID: 7148607347161037445, guid: 6433cc37261d1a54cb7adf45aefd32eb, type: 3}
-      propertyPath: bolt
-      value: 
-      objectReference: {fileID: 7472729760159459169, guid: 29be97ebe78d0d34eab3cd6dcc39728e, type: 3}
-    - target: {fileID: 7148607347161037445, guid: 6433cc37261d1a54cb7adf45aefd32eb, type: 3}
       propertyPath: lives
       value: 
       objectReference: {fileID: 1938992854923425326}
     - target: {fileID: 7148607347161037445, guid: 6433cc37261d1a54cb7adf45aefd32eb, type: 3}
-      propertyPath: fireSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7148607347161037445, guid: 6433cc37261d1a54cb7adf45aefd32eb, type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7148607347161037445, guid: 6433cc37261d1a54cb7adf45aefd32eb, type: 3}
-      propertyPath: verticalSpeed
-      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7148607347307127366, guid: 6433cc37261d1a54cb7adf45aefd32eb, type: 3}
       propertyPath: m_TagString

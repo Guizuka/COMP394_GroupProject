@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         //Move the player right automatically
-        playerDirectionHorizontal = new Vector2(horizontalSpeed * Time.deltaTime, 0);
+        playerDirectionHorizontal = new Vector2(horizontalSpeed* Time.deltaTime, 0);
     }
     void FixedUpdate()
     {

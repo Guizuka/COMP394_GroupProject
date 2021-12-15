@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireSpeed: 5
-  verticalSpeed: 25
+  verticalSpeed: 2000
   numberOfLives: 3
   bolt: {fileID: 7472729760159459169, guid: 29be97ebe78d0d34eab3cd6dcc39728e, type: 3}
   lives: {fileID: 0}
